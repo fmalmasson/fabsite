@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <section>
-      <v-parallax src="work.jpg" height="380">
+      <v-parallax src="lake.jpeg" height="380">
         <v-layout column align-center justify-center>
           <h2 class="mb-2 display-3">Formation</h2>
           <!-- <v-btn
@@ -22,9 +22,10 @@
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
                 <div class="headline">IMIE Nantes, Bac +2</div>
-                <div class="headline">Développeur Logiciel</div>
               </v-card-title>
               <v-card-text>
+                <strong>Développeur Logiciel</strong>
+              </br></br>
                 Titre de niveau 3 réalisé en 9 mois dont 3 mois de stage.
                 <p>J'ai choisi cette formation car l'IMIE proposait des cours et un stage qui, de mon point de vue, allait être le tremplin idéal pour ma reconversion.
                   La formation a débuté par 6 mois de cours où j'ai appris les bases indispensables du développement.
@@ -38,9 +39,9 @@
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
                 <div class="headline">Inseec Bordeaux, Bac +4</div>
-                <div class="headline">Bachelor in Business Administration</div>
               </v-card-title>
               <v-card-text>
+                <strong>Bachelor in Business Administration</strong></br></br>
                 Cursus international, 15 mois de stages en entreprise
                 <p>Je suis extrêmement content d'avoir réalisé ce parcours à vocation internationale qui a grandement construit la personne que je suis devenue.
                 Au delà de m'avoir apporté des connaissances techniques en Marketing, Finance et <strong>Management</strong>, l'Inseec m'a permis de m'ouvrir sur le monde, sur les personnes, et m'a fait rencontré des amis pour la vie.

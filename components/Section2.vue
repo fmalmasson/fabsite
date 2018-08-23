@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <section>
-      <v-parallax src="work2.jpg" height="380">
+      <v-parallax src="mountains.jpeg" height="380">
         <v-layout column align-center justify-center>
           <h2 class="mb-2 display-3">Expérience professionnelle</h2>
           <!-- <v-btn
@@ -25,10 +25,7 @@
                 <div class="headline">Léo by antares</div>
               </v-card-title>
               <v-card-text>
-                Configuration de l'environnement de travail sous Docker: Php-fpm, Redis, Postgres, Apache.</br>
-                Développement de fonctionnalités d'un logiciel Saas permettant l'optimisation de livraisons. Développement réalisé avec le framework Vue.js (similaire à React et Angular) respectant la version EcmaScript 6 de JavaScript. Le code est ensuite compilé avec Babel afin de permettre la compatibilité avec l'ensemble des browsers.</br>
-                <strong>Front-end</strong> : refonte de l'ensemble des formulaires de l'application pour passer du framework CSS Bootstrap à Element. Création de plusieurs composants ajoutant de nouvelles fonctionnalités avec notamment un parser et mapping de fichier Excel ou Csv.</br>
-                <strong>Back-end</strong>: personnalisation de la fonction de réinitilisation de mot de passe de Laravel, modification de Models, de Controllers, de Requests. Manipulation de données en BDD sous Tinker.</br>
+                <strong>Développeur</strong>
               </v-card-text>
             </v-card>
           </v-flex>

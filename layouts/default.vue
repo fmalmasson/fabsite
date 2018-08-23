@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-toolbar class="white">
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title v-text="title" :style="{color: '#50ac91'}"></v-toolbar-title>
     </v-toolbar>
     <v-content>
       <nuxt>
