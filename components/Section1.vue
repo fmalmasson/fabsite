@@ -1,57 +1,35 @@
 <template>
-  <div>
-    <section>
-      <v-parallax src="sbc.jpg" height="400">
-        <v-layout
-          column
-          align-center
-          justify-center
-          class="white--text">
-          <h2 class="mb-2 display-3">Développeur Full-Stack</h2>
-          <em class="intro">
-          </em>
+
+  <div style="position:relative; z-index:10">
+    <div class="parallax" v-scroll="onScroll">
+      <v-toolbar fixed id="toolbar" color="white" height="50px" v-if="toolbarDisplay">
+        <v-avatar
+          tile="false"
+          size="50px"
+          color="white"
+        >
+        <img src="fm.png" alt="avatar">
+        </v-avatar>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat>Expérience Pro</v-btn>
+          <v-btn flat>Formation</v-btn>
+          <v-btn flat>Contact</v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-container text-xs-center fill-height>
+        <v-layout row wrap align-center>
+          <v-flex class="white--text" xs12 justify-center>
+            <span class="hello" v-scroll-reveal.reset="{ delay: 0 }">Hello :)</span><span v-scroll-reveal.reset="{ delay: 1100 }"> my name is</span></br>
+            <span class="name" v-scroll-reveal.reset="{ delay: 1500 }">Fabien MALMASSON</span>
+          </br>
+          </br>
+          <span class="whoAmI" v-scroll-reveal.reset="{ delay: 2500 }">I'm a Full Stack DEVELOPER @ </span><span class="pink--text whoAmI" v-scroll-reveal.reset="{ delay: 2500 }">Antares</span>
+
+          </v-flex>
         </v-layout>
-      </v-parallax>
-    </section>
-
-    <section>
-      <v-container fluid>
-      <v-layout
-        column
-        wrap
-        class="my-5"
-        align-center>
-        <v-flex xs12 md8>
-            <h2 class="headline" :style="{color: '#50ac91'}">Skills</h2>
-        </v-flex>
-
-              <v-flex xs12 md12>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text >
-                    <span class="skills">Vue.js + Laravel</span>
-                    <!-- <span class="">Langages :</span><span class="">  {{ languages }}  </span></br>
-                  </br><span class="">Frameworks: </span><span> {{ frameworks }}  </span></br>
-                </br><span class="">Librairies: </span><span> {{ librairies }}  </span></br>
-              </br><span class="">Versionning: </span><span> {{ Versionnings }}  </span> -->
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-
-              <!-- <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="blue--text text--lighten-2">face</v-icon>
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <h3>soft-skills</h3>
-                  </v-card-title>
-                  <v-card-text>
-  Je suis quelqu'un de fiable et honnête qui n'hésite jamais à se remettre en question afin de progresser. D'humeur constante, je suis autant à l'aise à l'oral qu'à l'écrit. J'aime les challenges, résoudre des problèmes, être intellectuellement sollicité. Mes diverses expériences, tant professionnelles qu'humaines m'ont permis de développer mon ouverture d'esprit, mon sens des priorités et ma flexibilité. De nature autonome, j'aime le travail en équipe quand il est bien fait.                </v-card-text>
-                </v-card>
-              </v-flex> -->
-      </v-layout>
-    </v-container>
-    </section>
+      </v-container>
+    </div>
   </div>
 
 </template>
@@ -59,6 +37,9 @@
 <script>
 export default {
   data: () => ({
+    toolbarDisplay: false,
+    color: 'white',
+    textColorClass: 'white--text',
     languages: '[ HTML, JS, CSS, PHP, SQL ]',
     frameworks: '[ Vuejs, Laravel, Vuetify, Quasar, Element ]',
     BDD: '[ PostgreSQL, MySQL ]',
@@ -66,14 +47,47 @@ export default {
     Versionnings: '[ Git, Bitbucket ]'
   }),
   computed: {
-    color () {
-      return '#50ac91'
+  },
+  methods: {
+    onScroll () {
+      if (window.pageYOffset <= 50) {
+        this.toolbarDisplay = false
+      } else {
+        this.toolbarDisplay = true
+      }
     }
   }
 }
 </script>
-<style>
+<style lang="css">
+.name {
+  font-size: 65px;
+  font-weight: 700;
+}
+.hello {
+  font-size: 25px;
+}
+.whoAmI {
+  font-weight: 400;
+  font-size: 18px;
+}
+.parallax {
+  height: 100vh;
+  background-image: url("/static/orion.jpg");
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .skills {
   font-size: '30px';
+}
+
+.theme--light .toolbar {
+  z-index: 10;
+  background-color: transparent;
 }
 </style>

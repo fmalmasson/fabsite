@@ -1,30 +1,26 @@
 <template lang="html">
-  <div>
+  <div class="education">
     <section>
-      <v-parallax src="lake.jpeg" height="380">
-        <v-layout column align-center justify-center>
-          <h2 class="mb-2 display-3">Formation</h2>
-          <!-- <v-btn
-            class="blue lighten-2 mt-5"
-            dark
-            large
-            href="../cv.pdf">
-            Télécharger mon CV
-          </v-btn> -->
-        </v-layout>
-      </v-parallax>
-    </section>
+      <div class="parallax2">
+        <v-container text-xs-center fill-height>
+          <v-layout row wrap align-center>
+            <v-flex class="white--text" xs12 justify-center>
+              <span class="name">Formation</span>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </div>
 
-    <section>
-      <v-container grid-list-xl>
-        <v-layout row wrap justify-center class="my-5">
-          <v-flex xs12 sm4>
+      <v-container grid-list-xl class="fullContainer">
+        <v-layout  wrap justify-center class="">
+          <v-flex xs6>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="headline">IMIE Nantes, Bac +2</div>
+                <div class="headline pink--text" v-scroll-reveal.reset="{ viewFactor: 0.2 }">IMIE Nantes, Bac +2</div>
+
               </v-card-title>
-              <v-card-text>
-                <strong>Développeur Logiciel</strong>
+              <v-card-text v-scroll-reveal.reset="{ viewFactor: 0.4 }">
+                <strong v-scroll-reveal.reset="{ viewFactor: 0.2 }"class="headline">Développeur Logiciel</strong>
               </br></br>
                 Titre de niveau 3 réalisé en 9 mois dont 3 mois de stage.
                 <p>J'ai choisi cette formation car l'IMIE proposait des cours et un stage qui, de mon point de vue, allait être le tremplin idéal pour ma reconversion.
@@ -35,13 +31,15 @@
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs12 sm4 offset-sm1>
+          <v-flex xs6>
+          </v-flex>
+          <v-flex xs6 offset-xs6>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="headline">Inseec Bordeaux, Bac +4</div>
+                <div class="headline pink--text" v-scroll-reveal.reset="{ viewFactor: 0.2 }">Inseec Bordeaux, Bac +4</div>
               </v-card-title>
-              <v-card-text>
-                <strong>Bachelor in Business Administration</strong></br></br>
+              <v-card-text v-scroll-reveal.reset="{ viewFactor: 0.4 }">
+                <strong class="headline">Bachelor in Business Administration</strong></br></br>
                 Cursus international, 15 mois de stages en entreprise
                 <p>Je suis extrêmement content d'avoir réalisé ce parcours à vocation internationale qui a grandement construit la personne que je suis devenue.
                 Au delà de m'avoir apporté des connaissances techniques en Marketing, Finance et <strong>Management</strong>, l'Inseec m'a permis de m'ouvrir sur le monde, sur les personnes, et m'a fait rencontré des amis pour la vie.
@@ -87,5 +85,30 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+.fullContainer {
+  height: 100vh;
+}
+.education {
+  margin-top: -50px;
+  background-color: white;
+}
+.title {
+  font-size: 65px !important;
+  font-weight: 700 !important;
+}
+.parallax2 {
+  height: 80vh;
+  background-image: url("/static/macpro.jpg");
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+  height: 100vh;
+}
+
 </style>

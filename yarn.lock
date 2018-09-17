@@ -4981,6 +4981,10 @@ schema-utils@^0.4.0, schema-utils@^0.4.5:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
 
+scrollreveal@^3.3.6:
+  version "3.4.0"
+  resolved "http://registry.npmjs.org/scrollreveal/-/scrollreveal-3.4.0.tgz#77ce77b383d1883f2aafebdfc6f17a105718a780"
+
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
@@ -5740,6 +5744,12 @@ vue-meta@^1.4.3:
 vue-router@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"
+
+vue-scroll-reveal@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue-scroll-reveal/-/vue-scroll-reveal-1.0.8.tgz#f8e3a3006d819a7a9d1e86392a6567d2c1a4d4bc"
+  dependencies:
+    scrollreveal "^3.3.6"
 
 vue-server-renderer@^2.5.13:
   version "2.5.16"

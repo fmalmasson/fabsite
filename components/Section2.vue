@@ -1,35 +1,58 @@
 <template lang="html">
-  <div>
+  <div class="xp-pro">
     <section>
-      <v-parallax src="mountains.jpeg" height="380">
-        <v-layout column align-center justify-center>
-          <h2 class="mb-2 display-3">Expérience professionnelle</h2>
-          <!-- <v-btn
-            class="blue lighten-2 mt-5"
-            dark
-            large
-            href="../cv.pdf"
-          >
-            Télécharger mon CV
-          </v-btn> -->
-        </v-layout>
-      </v-parallax>
-    </section>
-
-    <section>
-      <v-container grid-list-xl>
-        <v-layout row wrap justify-center class="my-5">
-          <v-flex xs12 sm4>
+      <v-container class="xpContainer" text-xs-center>
+        <v-layout row wrap justify-center>
+          <v-flex xs12 class="xpElements">
             <v-card class="elevation-0 transparent">
-              <v-card-title primary-title class="layout justify-center">
-                <div class="headline">Léo by antares</div>
+              <v-card-title primary-title class="" style="justify-content: center;">
+                <div class="headline pink--text">Développeur Full Stack</div>
               </v-card-title>
               <v-card-text>
-                <strong>Développeur</strong>
+                <span class="about">I'm currently working as a full stack developer at Antares, in Nantes.</span>
+                <!-- <v-layout fill-height row wrap text-xs-center align-center>
+                  <v-flex xs3>
+                    <v-avatar
+                      tile="false"
+                      size="100px"
+                      color="white"
+                    >
+                    <img src="html.png" alt="avatar">
+                    </v-avatar>
+                  </v-flex>
+                  <v-flex>
+                    <v-avatar
+                      tile="false"
+                      size="100px"
+                      color="white"
+                    >
+                    <img src="css.png" alt="avatar">
+                    </v-avatar>
+                  </v-flex>
+                  <v-flex>
+                    <v-avatar
+                      tile="false"
+                      size="100px"
+                      color="white"
+                    >
+                    <img src="vuejs.jpg" alt="avatar">
+                    </v-avatar>
+                  </v-flex>
+                  <v-flex>
+                    <v-avatar
+                      tile="false"
+                      size="100px"
+                      color="white"
+                    >
+                    <img src="laravel.png" alt="avatar">
+                    </v-avatar>
+                  </v-flex>
+
+                </v-layout> -->
               </v-card-text>
             </v-card>
           </v-flex>
-          <v-flex xs12 sm4 offset-sm1>
+          <!-- <v-flex xs12 sm4 offset-sm1>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
                 <div class="headline">Dans une autre vie...</div>
@@ -50,7 +73,7 @@
                 </template>
               </v-list>
             </v-card>
-          </v-flex>
+          </v-flex> -->
         </v-layout>
       </v-container>
     </section>
@@ -128,5 +151,30 @@ export default {
 </script>
 
 <style lang="css">
+.about {
+  color: #666666;
+}
+.application.theme--light {
+  background-color: white;
+}
+.xp-pro {
+  height: 80vh;
+  margin-bottom: 0px;
+}
 
+.xpContainer {
+  margin-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: -10px;
+}
+.skillsCard {
+  z-index: 10;
+  margin-top: 0px;
+}
+.logos {
+  height: 150px;
+}
+.xpElements {
+  margin-top: 187px;
+}
 </style>
