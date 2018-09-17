@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="education">
+  <div id="formation">
     <section>
       <div class="parallax2">
         <v-container text-xs-center fill-height>
@@ -89,7 +89,7 @@ export default {
 .fullContainer {
   height: 100vh;
 }
-.education {
+.formation {
   margin-top: -50px;
   background-color: white;
 }

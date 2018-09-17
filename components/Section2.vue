@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="xp-pro">
+  <div id="xp-pro">
     <section>
       <v-container class="xpContainer" text-xs-center>
         <v-layout row wrap justify-center>
@@ -157,7 +157,7 @@ export default {
 .application.theme--light {
   background-color: white;
 }
-.xp-pro {
+#xp-pro {
   height: 80vh;
   margin-bottom: 0px;
 }

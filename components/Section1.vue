@@ -12,9 +12,9 @@
         </v-avatar>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat>Expérience Pro</v-btn>
-          <v-btn flat>Formation</v-btn>
-          <v-btn flat>Contact</v-btn>
+          <v-btn class="btn-toolbar" depressed flat href="/#xp-pro">Expérience Pro</v-btn>
+          <v-btn class="btn-toolbar" depressed flat href="/#formation">Formation</v-btn>
+          <v-btn class="btn-toolbar" depressed flat>Contact</v-btn>
         </v-toolbar-items>
       </v-toolbar>
       <v-container text-xs-center fill-height>
@@ -89,5 +89,17 @@ export default {
 .theme--light .toolbar {
   z-index: 10;
   background-color: transparent;
+}
+.btn-toolbar {
+  color: black;
+}
+.btn__content {
+  &:before {
+      background-color: transparent !important;
+      transition: none !important;
+    }
+}
+.btn-toolbar:hover {
+  text-decoration: underline;
 }
 </style>
